@@ -116,6 +116,10 @@ setup_kwargs = dict(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        'zope.interface',
+        'zope.i18nmessageid',
+        'plone.supermodel',
+        'plone.autoform',
         # ... further requirements removed
     ],
     entry_points="""
