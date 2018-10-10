@@ -188,7 +188,6 @@ setup_kwargs = dict(
         "Intended Audience :: Developers",
         "Natural Language :: German",
         "Operating System :: OS Independent",
-        "License :: OSI Approved :: Apache Software License",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
     # keywords='Python Plone',
@@ -207,20 +206,8 @@ setup_kwargs = dict(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
-        'plone.api',
-        'Products.GenericSetup>=1.8.2',
-        'z3c.jbot',
+        # ... further requirements removed
     ],
-    extras_require={
-        'test': [
-            'plone.app.testing',
-            # Plone KGS does not use this version, because it would break
-            # Remove if your package shall be part of coredev.
-            # plone_coredev tests as of 2016-04-01.
-            'plone.testing>=5.0.0',
-            'plone.app.robotframework[debug]',
-        ],
-    },
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone

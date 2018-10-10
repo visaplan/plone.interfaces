@@ -32,14 +32,6 @@ Documentation
 Full documentation for end users can be found in the "docs" folder.
 
 
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
-
 Installation
 ------------
 
@@ -75,6 +67,5 @@ License
 -------
 
 The project is licensed under the GPLv2.
-The project is licensed under the Apache Software License.
 
 .. vim: tw=79 cc=+1 sw=4 sts=4 si et
