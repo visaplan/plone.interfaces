@@ -90,6 +90,13 @@ ENV/
 env.bak/
 venv.bak/
 
+# Virtual Environment
+bin/
+Scripts/
+include/
+lib64
+pip-selfcheck.json
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -102,3 +109,14 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# SCM
+.svn/
+
+# visaplan development
+auto.msg
+scripts/
+update-module
+init
+init.vim
+VERSION_SUFFIX
