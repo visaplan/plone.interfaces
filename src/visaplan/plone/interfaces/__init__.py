@@ -6,3 +6,9 @@ for the Archetypes-based content types of the UNITRACC family of Plone sites.
 """
 
 # MessageFactory moved to factories module
+from .behaviors import (
+    IHeightAndWidth,
+    ICaptionAndLegend,
+    IExcludeFromSearch,
+    IHierarchicalBuzzword,
+    )
