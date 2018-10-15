@@ -12,7 +12,7 @@ from plone.autoform.interfaces import IFormFieldProvider
 from zope.i18nmessageid import MessageFactory
 
 
-from visaplan.plone.interfaces import _
+from visaplan.plone.interfaces.factories import _
 
 
 class IHeightAndWidth(model.Schema):
