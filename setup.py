@@ -116,10 +116,17 @@ setup_kwargs = dict(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        # https://docs.plone.org/4/en/external/plone.app.dexterity/docs/behaviors/creating-and-registering-behaviors.html:
+        'plone.behavior',
+        'zope.schema',
         'zope.interface',
+        'zope.component',
+        # MessageFactory:
         'zope.i18nmessageid',
+	# others:
         'plone.supermodel',
-        'plone.autoform',
+        # 'plone.autoform',
+        # 'plone.directives.form',  # in turn, requires five.grok etc.
         # ... further requirements removed
     ],
     entry_points="""
