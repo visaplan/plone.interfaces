@@ -4,8 +4,7 @@ visaplan.plone.interfaces: schemas for Dexterity-based content types
 The schemas reflect fields which are currently implemented one-by-one
 for the Archetypes-based content types of the UNITRACC family of Plone sites.
 """
-from plone.directives import form
-# from plone.supermodel import model
+from plone.supermodel import model
 from zope import schema
 from zope.interface import alsoProvides
 from zope import schema
@@ -13,15 +12,13 @@ from plone.autoform.interfaces import IFormFieldProvider
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('visaplan.plone.interfaces')
+from visaplan.plone.interfaces import _
 
 
-class IHeightAndWidth(form.Schema):
+class IHeightAndWidth(model.Schema):
     """\
     Given dimensions
     """
-
-    if 0 and 'model.Schema --> form.Schema':\
     model.fieldset(
         u'dimensions',
         label=_(u"Dimensions"),
@@ -43,7 +40,21 @@ class IHeightAndWidth(form.Schema):
         description=_(u"The width needed for a reasonable view of the object"))
 
 
-class ICaptionAndLegend(form.Schema):
+'''
+@implementer(IHeightAndWidth)
+class HeightAndWidth(object):
+    """
+    Apply values for the (chosen) height and width
+    """
+    def __init__(self, context):
+        self.context = context
+
+    @property
+    def height(self):
+        return self.context
+'''
+       
+class ICaptionAndLegend(model.Schema):
     """\
     Caption and Legend
     """
@@ -65,7 +76,7 @@ class ICaptionAndLegend(form.Schema):
                       ))
 
 
-class IExcludeFromSearch(form.Schema):
+class IExcludeFromSearch(model.Schema):
     """\
     Allows the implementing objects to be excluded from standard search operations
     """
@@ -78,7 +89,7 @@ class IExcludeFromSearch(form.Schema):
                       ))
 
 
-class IHierarchicalBuzzword(form.Schema):
+class IHierarchicalBuzzword(model.Schema):
     """\
     A hierarchical buzzword system
 
